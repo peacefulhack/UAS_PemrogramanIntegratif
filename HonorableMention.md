@@ -26,6 +26,8 @@ maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi 
 **-Charles Dickens**
 
 
+❤️Thank you for being nice people❤️
+
 "There is no exercise better for the heart than reaching down and lifting people up."<br>
 **-John Holmes**
 
