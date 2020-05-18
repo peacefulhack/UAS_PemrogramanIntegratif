@@ -72,15 +72,15 @@ class sumbang extends Model
         try {
             $db = static::getDb();
 
-            $sql = "INSERT INTO `jenis_sumbangan`(`name`) VALUES ( :jsumbang )";
+            $sql = "INSERT INTO jenis_sumbangan(name) VALUES (:jsumbang);SELECT LAST_INSERT_ID() AS id";
 
             $stmt = $db->prepare($sql);
 
             $stmt->bindParam(":jsumbang", $jsumbang);
 
             $stmt->execute();
-
-            return $db->lastInsertId();
+            $id = $stmt->fetch(PDO::FETCH_ASSOC);
+            return $id['id'];
             
         } catch (PDOException $e) {
             echo $e->getMessage();

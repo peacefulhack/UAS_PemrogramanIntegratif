@@ -44,15 +44,15 @@ class HomeController {
         $userid = sumbang::setUser( $_POST['name'], $_POST['gender'] );
 
         $iter = 0;
-        
+        return print_r($jsumbang);
         foreach($jsumbang as $js){
             $jsid = sumbang::isThere($js);
             if( $jsid >= 1){
                 $done = sumbang::setSumbangan($userid,$jsid,$jumlah[$iter]);
             }
             else{
-                $jsid = sumbang::setJS($js);
-                $done = sumbang::setSumbangan($userid, $jsid[0], $jumlah[$iter]);
+                $jsidd = sumbang::setJS($js);
+                $done = sumbang::setSumbangan($userid, $jsidd, $jumlah[$iter]);
             }
             $iter++;
         }
