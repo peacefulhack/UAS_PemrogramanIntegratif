@@ -13,7 +13,7 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
   - [Installation](#Installation)
   - [Localization](#Localization)
 - [Usage](#usage)
-- [Penjelasan kodingan](#Penjelasan kodingan)
+- [Penjelasan kodingan](#Penjelasan%20kodingan)
   - [Tambah](#Tambah)
   - [Jenis](#Jenis)
 - [Hasil](#Hasil)
