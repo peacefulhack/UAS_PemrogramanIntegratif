@@ -7,6 +7,9 @@
 Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller).
 <br><br>
 *Lihat [MVC](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm) untuk mengetahui lebih lanjut.*
+# Table Of Content
+[Setup](#setup)
+
 
 # Setup
 ### Requirement
