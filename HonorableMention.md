@@ -1,5 +1,8 @@
 # Honorable Mention
-jika anda penasaran dengan text pada background home
+terima kasih untuk bapak munif telah mengajari pelajaran yang sangat berharga, terima kasih orangtua saya yang telah melahirkan saya, terima kasih teman-teman ku di manapun kamu berada :D
+<details>
+  <summary>Text di background</summary>
+  jika anda penasaran dengan text pada background home
 ![img/pahlawan.gif](img/pahlawan.gif)
 maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi quote yang saya kutip pada background
 
@@ -69,5 +72,7 @@ maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi 
 
 "Remember this. Hold on to this. This is the only perfection there is, the perfection of helping others. This is the only thing we can do that has any lasting meaning. This is why we're here. To make each other feel safe."<br>
 **-Andre Agassi**, *Open*
+
+</details>
 
 ❤️Thank you for being nice people❤️
