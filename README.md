@@ -13,7 +13,7 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
   - [Installation](#Installation)
   - [Localization](#Localization)
 - [Usage](#usage)
-- [Penjelasan kodingan](#Penjelasan-kodingan)
+- [Penjelasan kodingan](#Penjelasan-Kodingan)
   - [Tambah](#Tambah)
   - [Jenis](#Jenis)
 - [Hasil](#Hasil)
@@ -23,7 +23,7 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
 - [Old Version](#Old-Version)
 
 # 『Setup』
-### Requirement
+### 【Requirement】
 [![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
 [![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
 1. [Composer](https://getcomposer.org/doc/00-intro.md)
@@ -31,7 +31,7 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
 3. [NODE.js](https://nodejs.org/en/download/)
 4. Database (saya menggunakan [phpmyadmin 5.0.2](https://www.phpmyadmin.net/downloads/))
 
-### Installation
+### 【Installation】
 Download/Clone github ini kedalam komputer anda, anda memerlukan [Twig](https://twig.symfony.com/doc/3.x/intro.html#installation) dan [Composer](https://getcomposer.org/doc/00-intro.md) untuk menggunakan code ini, lalu install dependencies menggunakan [node.js](https://nodejs.org/en/) dengan cara buka CMD (atau aplikasi serupa) anda lalu ketik
 ```
 $ npm install
@@ -39,7 +39,7 @@ $ npm install
 <img src="img/npmInstall.gif" alt="npm install" width="500px">
 Note: Jika terjadi error, maka re-install NODE.js anda, atau cek <a href="https://docs.npmjs.com/common-errors">Common Error</a>.
 
-### Localization
+### 【Localization】
 1. buatlah database baru dengan nama terserah anda (disini saya namakan uas_pi).
 ![Create Database](img/createDatabase.gif)
 
@@ -71,8 +71,8 @@ Jenis/filter/[id]	=> Menampilkan list sumbangan berdasarkan id
 ```
 
 
-# 『Penjelasan kodingan』
-### tambah
+# 『Penjelasan Kodingan』
+### 【Tambah】
 URL: `Home/tambah`<br>
 pertama mengecek apakah method post dari form telah dikirimkan dari home menggunakan `isset`
 lalu check isi dari satu persatu, apakah ada yang kosong, jika tidak ada maka `setUser` dimana berisi 
@@ -100,7 +100,7 @@ dan langsung `setSumbangan` menggunakan sql:
 INSERT INTO `sumbangan`(`userid`, `jenis`, `jumlah`) VALUES (:userid , :jenisid , :jumlah)
 ```
 
-### jenis
+### 【jenis】
 URL: `jenis/index`<br>
 langsung select name dari jenis sumbangan menggunakan `getName` dan data list sumbangan dengan `getSumbangan`
 getname adalah select biasa, sedangkan getSumbangan adalah berikut:
