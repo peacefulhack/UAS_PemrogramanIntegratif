@@ -132,9 +132,10 @@ awalnya parameternya berupa name, tapi karena terlalu rawan, saya ganti id.
 
 # Framework
 1. [Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/download/)
-2. [Datatable](https://datatables.net/)
-3. [Form Validator](https://jqueryvalidation.org/)
-4. [Animate On Scroll](https://michalsnik.github.io/aos/)
+2. [Jquery](https://api.jquery.com/)
+3. [Datatable](https://datatables.net/)
+4. [Form Validator](https://jqueryvalidation.org/)
+5. [Animate On Scroll](https://michalsnik.github.io/aos/)
 
 # Font
 1. [Roboto](https://fonts.google.com/specimen/Roboto)
