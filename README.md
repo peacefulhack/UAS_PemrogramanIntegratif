@@ -1,4 +1,7 @@
-# ![COVID FIGHTER](img/pahlawan.gif)
+# NEW Version
+![COVID FIGHTER](img/pahlawan.gif)
+# Old Version
+![COVID FIGHTER](img/old.png)
 [![Peacefulhack code style](https://img.shields.io/badge/Author-Peacefulhack-green)](https://github.com/peacefulhack)
 [![Name](https://img.shields.io/badge/Name-M.%20Mikail%20Dwi%20k.-blue)](https://github.com/peacefulhack)
 [![NRP](https://img.shields.io/badge/NRP-05311840000028-brightgreen)](https://github.com/peacefulhack)
