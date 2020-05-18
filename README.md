@@ -1,8 +1,10 @@
-# ![COVID FIGHTER](img/pahlawan.gif)
+# NEW Version
+![COVID FIGHTER](img/pahlawan.gif)
+# Old Version
+![COVID FIGHTER](img/old.png)
 [![Peacefulhack code style](https://img.shields.io/badge/Author-Peacefulhack-green)](https://github.com/peacefulhack)
-[![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
-[![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
-
+[![Name](https://img.shields.io/badge/Name-M.%20Mikail%20Dwi%20k.-blue)](https://github.com/peacefulhack)
+[![NRP](https://img.shields.io/badge/NRP-05311840000028-brightgreen)](https://github.com/peacefulhack)
 
 Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller).
 <br><br>
@@ -22,6 +24,8 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
 
 # Setup
 ### Requirement
+[![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
+[![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
 1. [Composer](https://getcomposer.org/doc/00-intro.md)
 2. [Twig](https://twig.symfony.com/doc/3.x/intro.html#installation)
 3. [NODE.js](https://nodejs.org/en/download/)
@@ -33,7 +37,7 @@ Download/Clone github ini kedalam komputer anda, anda memerlukan [Twig](https://
 $ npm install
 ```
 <img src="img/npmInstall.gif" alt="npm install" width="500px">
-Note: Jika terjadi error, maka re-install NODE.js anda, atau cek [Common Error](https://docs.npmjs.com/common-errors).
+Note: Jika terjadi error, maka re-install NODE.js anda, atau cek <a href="https://docs.npmjs.com/common-errors">Common Error</a>.
 
 ### Localization
 1. buatlah database baru dengan nama terserah anda (disini saya namakan uas_pi).
@@ -69,7 +73,7 @@ Jenis/filter/[id]	=> Menampilkan list sumbangan berdasarkan id
 
 # Penjelasan kodingan
 ### tambah
-URL: `Home/tambah`
+URL: `Home/tambah`<br>
 pertama mengecek apakah method post dari form telah dikirimkan dari home menggunakan `isset`
 lalu check isi dari satu persatu, apakah ada yang kosong, jika tidak ada maka `setUser` dimana berisi 
 ```sql
@@ -97,7 +101,7 @@ INSERT INTO `sumbangan`(`userid`, `jenis`, `jumlah`) VALUES (:userid , :jenisid 
 ```
 
 ### jenis
-URL: `jenis/index`
+URL: `jenis/index`<br>
 langsung select name dari jenis sumbangan menggunakan `getName` dan data list sumbangan dengan `getSumbangan`
 getname adalah select biasa, sedangkan getSumbangan adalah berikut:
 ```php
@@ -118,7 +122,7 @@ tidak berupa angka tapi berupa nama dimana user.id=sumbangan.userid dan
 jenis_sumbangan.id=sumbangan.id WHERE 1 adalah selalu true, jika WHERE dihapus pun tidak masalah.
 ```
 
-URL:`jenis/filter/[id]`
+URL:`jenis/filter/[id]`<br>
 hampir sama dengan index dari jenis namun ditambahkan WHERE clause dimana:
 ```sql
 WHERE jenis_sumbangan.id=:name
@@ -131,9 +135,10 @@ awalnya parameternya berupa name, tapi karena terlalu rawan, saya ganti id.
 
 # Framework
 1. [Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/download/)
-2. [Datatable](https://datatables.net/)
-3. [Form Validator](https://jqueryvalidation.org/)
-4. [Animate On Scroll](https://michalsnik.github.io/aos/)
+2. [Jquery](https://api.jquery.com/)
+3. [Datatable](https://datatables.net/)
+4. [Form Validator](https://jqueryvalidation.org/)
+5. [Animate On Scroll](https://michalsnik.github.io/aos/)
 
 # Font
 1. [Roboto](https://fonts.google.com/specimen/Roboto)
