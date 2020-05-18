@@ -1,9 +1,14 @@
-# Honorable Mention
-terima kasih untuk bapak munif telah mengajari pelajaran yang sangat berharga, terima kasih orangtua saya yang telah melahirkan saya, terima kasih teman-teman ku di manapun kamu berada :D
+# 『Honorable Mention』
+<details>
+  <summary>Kepadamu</summary>
+  terima kasih untuk bapak munif telah mengajari pelajaran yang sangat berharga, terima kasih orangtua saya yang telah melahirkan saya, terima kasih teman-teman ku di manapun kamu berada :D.
+  dan tak lupa terima kasih kepadamu, siapapun itu :D
+</details>
+
 <details>
   <summary>Text di background</summary>
   jika anda penasaran dengan text pada background home
-![img/pahlawan.gif](img/pahlawan.gif)
+<img src="img/pahlawan.gif" alt="Pahlawan">
 maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi quote yang saya kutip pada background
 
 "If you want to lift yourself up, lift up someone else."<br>
