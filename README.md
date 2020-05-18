@@ -6,7 +6,7 @@
 Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller).
 <br><br>
 *Lihat [MVC](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm) untuk mengetahui lebih lanjut.*
-# Table Of Content
+# 『Table Of Content』
 - [Hero](#)
 - [Setup](#setup)
   - [Requirement](#Requirement)
@@ -22,7 +22,7 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
 - [New Version](#New-Version)
 - [Old Version](#Old-Version)
 
-# Setup
+# 『Setup』
 ### Requirement
 [![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
 [![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
@@ -56,7 +56,7 @@ define("DB_PASSWORD", "mWS4Qy0wfXBHU9ec");
 ```
 Lalu ubahlah BASE_URL menjadi url mu sendiri menuju public, karena saya menggunakan [XAMPP](https://www.apachefriends.org/index.html) maka terhitung dari folder htdocs menjadi localhost. Ubah juga DB_HOST menjadi hostingan anda, saya localhost, lalu DB_NAME adalah nama dari database anda, bukan platform database anda. lalu DB_USERNAME dan DB_PASSWORD adalah akun yang anda daftarkan dalam database. cek [users management](https://docs.phpmyadmin.net/en/latest/privileges.html) phpmyadmin.
 
-# Usage
+# 『Usage』
 URL dalam website ini berlaku seperti dibawah ini
 ```
 http://localhost/2020/UAS_PemrogramanIntegratif/public/[MAIN URL]/[METHOD]/[PARAMETER]
@@ -71,7 +71,7 @@ Jenis/filter/[id]	=> Menampilkan list sumbangan berdasarkan id
 ```
 
 
-# Penjelasan kodingan
+# 『Penjelasan kodingan』
 ### tambah
 URL: `Home/tambah`<br>
 pertama mengecek apakah method post dari form telah dikirimkan dari home menggunakan `isset`
@@ -130,19 +130,19 @@ WHERE jenis_sumbangan.id=:name
 dan name adalah id dari user, kenapa saya namain name, 
 awalnya parameternya berupa name, tapi karena terlalu rawan, saya ganti id.
 ```
-# Hasil
+# 『Hasil』
 ![done](img/done.gif)
 
-# Framework
+# 『Framework』
 1. [Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/download/)
 2. [Jquery](https://api.jquery.com/)
 3. [Datatable](https://datatables.net/)
 4. [Form Validator](https://jqueryvalidation.org/)
 5. [Animate On Scroll](https://michalsnik.github.io/aos/)
 
-# Font
+# 『Font』
 1. [Roboto](https://fonts.google.com/specimen/Roboto)
-# NEW Version
+# 『NEW Version』
 ![COVID FIGHTER](img/pahlawan.gif)
-# Old Version
+# 『Old Version』
 ![COVID FIGHTER](img/old.png)
