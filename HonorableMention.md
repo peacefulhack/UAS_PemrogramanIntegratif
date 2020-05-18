@@ -1,6 +1,7 @@
 # 『Honorable Mention』
 <details>
   <summary>Kepadamu</summary>
+  pejuang kesehatan, penjuang pundak keluarga, dan pejuang pendidikan terima kasih.
   terima kasih untuk bapak munif telah mengajari pelajaran yang sangat berharga, terima kasih orangtua saya yang telah melahirkan saya, terima kasih teman-teman ku di manapun kamu berada :D.
   dan tak lupa terima kasih kepadamu, siapapun itu :D
 </details>
