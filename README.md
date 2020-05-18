@@ -7,216 +7,133 @@
 Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller).
 <br><br>
 *Lihat [MVC](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm) untuk mengetahui lebih lanjut.*
+# Table Of Content
+- [Setup](#setup)
+  - [Requirement](#Requirement)
+  - [Installation](#Installation)
+  - [Localization](#Localization)
+- [Usage](#usage)
+- [Penjelasan kodingan](#Penjelasan-kodingan)
+  - [Tambah](#Tambah)
+  - [Jenis](#Jenis)
+- [Hasil](#Hasil)
+- [Framework](#Framework)
+- [Font](#Font)
 
-## Setup
+# Setup
+### Requirement
+1. [Composer](https://getcomposer.org/doc/00-intro.md)
+2. [Twig](https://twig.symfony.com/doc/3.x/intro.html#installation)
+3. [NODE.js](https://nodejs.org/en/download/)
+4. Database (saya menggunakan [phpmyadmin 5.0.2](https://www.phpmyadmin.net/downloads/))
 
-Download/Clone github ini kedalam komputer anda, lalu install dependencies menggunakan [node.js](https://nodejs.org/en/) dengan cara buka CMD (atau aplikasi serupa) anda lalu ketik
+### Installation
+Download/Clone github ini kedalam komputer anda, anda memerlukan [Twig](https://twig.symfony.com/doc/3.x/intro.html#installation) dan [Composer](https://getcomposer.org/doc/00-intro.md) untuk menggunakan code ini, lalu install dependencies menggunakan [node.js](https://nodejs.org/en/) dengan cara buka CMD (atau aplikasi serupa) anda lalu ketik
 ```
 $ npm install
 ```
+<img src="img/npmInstall.gif" alt="npm install" width="500px">
+Note: Jika terjadi error, maka re-install NODE.js anda, atau cek [Common Error](https://docs.npmjs.com/common-errors).
 
-Note to Linux users: If you get a "No usable sandbox!" error, you need to enable [system sandboxing](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#setting-up-chrome-linux-sandbox).
+### Localization
+1. buatlah database baru dengan nama terserah anda (disini saya namakan uas_pi).
+![Create Database](img/createDatabase.gif)
 
-## Usage
+2. Lalu Import Tabel kedalam database anda untuk menghindari error, gunakan urutan jenis_sumbangan.sql -> user.sql -> sumbangan.sql karena sumbangan.sql terdapat [foreign key](https://www.tutorialspoint.com/sql/sql-foreign-key.htm) terhadap user dan jenis sumbangan.
 
-```js
-const Pageres = require('pageres');
+3. Bukalah [Constant.php](app/core/Constant.php) didalam folder [core](app/core)
+```php
+define("BASE_URL", 'http://localhost/2020/uasPI/public');
 
-(async () => {
-	await new Pageres({delay: 2})
-		.src('https://github.com/sindresorhus/pageres', ['480x320', '1024x768', 'iphone 5s'], {crop: true})
-		.src('https://sindresorhus.com', ['1280x1024', '1920x1080'])
-		.src('data:text/html,<h1>Awesome!</h1>', ['1024x768'])
-		.dest(__dirname)
-		.run();
-		
-	console.log('Finished generating screenshots!');
-})();
+define("DB_HOST", "localhost");
+define("DB_NAME", "integratif");
+define("DB_USERNAME", "integratif");
+define("DB_PASSWORD", "mWS4Qy0wfXBHU9ec");
+```
+Lalu ubahlah BASE_URL menjadi url mu sendiri menuju public, karena saya menggunakan [XAMPP](https://www.apachefriends.org/index.html) maka terhitung dari folder htdocs menjadi localhost. Ubah juga DB_HOST menjadi hostingan anda, saya localhost, lalu DB_NAME adalah nama dari database anda, bukan platform database anda. lalu DB_USERNAME dan DB_PASSWORD adalah akun yang anda daftarkan dalam database. cek [users management](https://docs.phpmyadmin.net/en/latest/privileges.html) phpmyadmin.
+
+# Usage
+URL dalam website ini berlaku seperti dibawah ini
+```
+http://localhost/2020/UAS_PemrogramanIntegratif/public/[MAIN URL]/[METHOD]/[PARAMETER]
+
+Main URL terdapat 2 yaitu Home dan Jenis dengan method:
+
+Home/index 		=> Menampilkan form dari Sumbangan
+Home/tambah		=> Menambah data dari form sumbangan kedalam database
+Jenis/index		=> Menampilkan semua list sumbangan didalam database
+Jenis/filter		=> Return blank putih karena tidak ada parameter
+Jenis/filter/[id]	=> Menampilkan list sumbangan berdasarkan id
 ```
 
-## API
 
-### Pageres(options?)
-
-#### options
-
-Type: `object`
-
-##### delay
-
-Type: `number` *(Seconds)*\
-Default: `0`
-
-Delay capturing the screenshot.
-
-Useful when the site does things after load that you want to capture.
-
-##### timeout
-
-Type: `number` *(Seconds)*\
-Default: `60`
-
-Number of seconds after which the request is aborted.
-
-##### crop
-
-Type: `boolean`\
-Default: `false`
-
-Crop to the set height.
-
-##### css
-
-Type: `string`
-
-Apply custom CSS to the webpage. Specify some CSS or the path to a CSS file.
-
-##### script
-
-Type: `string`
-
-Apply custom JavaScript to the webpage. Specify some JavaScript or the path to a file.
-
-##### cookies
-
-Type: `Array<string | object>`
-
-A string with the same format as a [browser cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies) or [an object](https://github.com/GoogleChrome/puppeteer/blob/master/docs/api.md#pagesetcookiecookies).
-
-Tip: Go to the website you want a cookie for and [copy-paste it from DevTools](https://stackoverflow.com/a/24961735/64949).
-
-##### filename
-
-Type: `string`
-
-Define a customized filename using [Lo-Dash templates](https://lodash.com/docs#template).\
-For example: `<%= date %> - <%= url %>-<%= size %><%= crop %>`.
-
-Available variables:
-
-- `url`: The URL in [slugified](https://github.com/sindresorhus/filenamify-url) form, eg. `http://yeoman.io/blog/` becomes `yeoman.io!blog`
-- `size`: Specified size, eg. `1024x1000`
-- `width`: Width of the specified size, eg. `1024`
-- `height`: Height of the specified size, eg. `1000`
-- `crop`: Outputs `-cropped` when the crop option is true
-- `date`: The current date (YYYY-MM-DD), eg. 2015-05-18
-- `time`: The current time (HH-mm-ss), eg. 21-15-11
-
-##### incrementalName
-
-Type: `boolean`\
-Default: `false`
-
-When a file exists, append an incremental number.
-
-##### selector
-
-Type: `string`
-
-Capture a specific DOM element matching a CSS selector.
-
-##### hide
-
-Type: `string[]`
-
-Hide an array of DOM elements matching CSS selectors.
-
-##### username
-
-Type: `string`
-
-Username for authenticating with HTTP auth.
-
-##### password
-
-Type: `string`
-
-Password for authenticating with HTTP auth.
-
-##### scale
-
-Type: `number`\
-Default: `1`
-
-Scale webpage `n` times.
-
-##### format
-
-Type: `string`\
-Default: `png`\
-Values: `'png' | 'jpg'`
-
-Image format.
-
-##### userAgent
-
-Type: `string`
-
-Custom user agent.
-
-##### headers
-
-Type: `object`
-
-Custom HTTP request headers.
-
-##### transparent
-
-Type: `boolean`\
-Default: `false`
-
-Set background color to `transparent` instead of `white` if no background is set.
-
-### pageres.src(url, sizes, options?)
-
-Add a page to screenshot.
-
-#### url
-
-*Required*\
-Type: `string`
-
-URL or local path to the website you want to screenshot. You can also use a data URI.
-
-#### sizes
-
-*Required*\
-Type: `string[]`
-
-Use a `<width>x<height>` notation or a keyword.
-
-A keyword is a version of a device from [this list](https://github.com/kevva/viewport-list/blob/master/data.json).
-
-You can also pass in the `w3counter` keyword to use the ten most popular resolutions from [w3counter](http://www.w3counter.com/globalstats.php).
-
-#### options
-
-Type: `object`
-
-Options set here will take precedence over the ones set in the constructor.
-
-### pageres.dest(directory)
-
-Set the destination directory.
-
-#### directory
-
-Type: `string`
-
-### pageres.run()
-
-Run pageres. Returns `Promise<Buffer[]>`.
-
-## Task runners
-
-Check out [grunt-pageres](https://github.com/sindresorhus/grunt-pageres) if you're using Grunt.
-
-For Gulp and Broccoli, just use the API directly. No need for a wrapper plugin.
-
-## Built with Pageres
-
-- [Break Shot](https://github.com/victorferraz/break-shot) - Desktop app for capturing screenshots of responsive websites.
-
-## Related
-
-- [capture-website](https://github.com/sindresorhus/capture-website) - A different take on screenshotting websites
+# Penjelasan kodingan
+### tambah
+URL: `Home/tambah`
+pertama mengecek apakah method post dari form telah dikirimkan dari home menggunakan `isset`
+lalu check isi dari satu persatu, apakah ada yang kosong, jika tidak ada maka `setUser` dimana berisi 
+```sql
+INSERT INTO `user`( `name`, `gender`) VALUES (:name , :gender)
+
+dimana name dan gender adalah inputan 
+user yang di passing kedalam variable
+```
+lalu mengecheck `isThere` untuk mengecheck apakah jenis yang di inputkan sudah ada atau belum, menggunakan
+```sql
+SELECT `id` FROM `jenis_sumbangan` WHERE `name`=:jsumbang LIMIT 1
+
+dimana jsumbang adalah jenis sumbangan yang di inputkan user dan 
+sql di limit 1 karena kita butuh 1 nama sama atau tidak ada
+```
+setelah itu, jika ada maka langusng `setSumbangan`, jika tidak ada maka `setJS` atau men-set Jenis sumbangan dulu menggunakan:
+```sql
+INSERT INTO `jenis_sumbangan`(`name`) VALUES ( :jsumbang )
+
+dengan jsumbang adalah jenis sumbangan yang di input oleh user
+```
+dan langsung `setSumbangan` menggunakan sql:
+```sql
+INSERT INTO `sumbangan`(`userid`, `jenis`, `jumlah`) VALUES (:userid , :jenisid , :jumlah)
+```
+
+### jenis
+URL: `jenis/index`
+langsung select name dari jenis sumbangan menggunakan `getName` dan data list sumbangan dengan `getSumbangan`
+getname adalah select biasa, sedangkan getSumbangan adalah berikut:
+```php
+$sql = "SELECT (@cnt := @cnt + 1) AS nomer, b.name,\n"
+
+                    . "b.gender, \n"
+                    . "c.name AS jenis, a.jumlah \n"
+                    . "FROM `sumbangan` AS a\n"
+                    . "CROSS JOIN (SELECT @cnt := 0) AS dummy\n"
+                    . "INNER JOIN user AS b ON b.id=a.userid\n"
+                    . "INNER JOIN jenis_sumbangan AS c ON c.id=a.jenis\n"
+                    . "WHERE 1";
+
+
+yang dimana maksudnya, mengambil var cnt untuk dijadikan penomoran, karena A_I dalam ID tidak selalu urut,
+karena masalah delete atau yang lainnya, lalu INNER JOIN adalah agar user dan jenis_sumbangan nya 
+tidak berupa angka tapi berupa nama dimana user.id=sumbangan.userid dan 
+jenis_sumbangan.id=sumbangan.id WHERE 1 adalah selalu true, jika WHERE dihapus pun tidak masalah.
+```
+
+URL:`jenis/filter/[id]`
+hampir sama dengan index dari jenis namun ditambahkan WHERE clause dimana:
+```sql
+WHERE jenis_sumbangan.id=:name
+
+dan name adalah id dari user, kenapa saya namain name, 
+awalnya parameternya berupa name, tapi karena terlalu rawan, saya ganti id.
+```
+# Hasil
+![done](img/done.gif)
+
+# Framework
+1. [Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/download/)
+2. [Datatable](https://datatables.net/)
+3. [Form Validator](https://jqueryvalidation.org/)
+4. [Animate On Scroll](https://michalsnik.github.io/aos/)
+
+# Font
+1. [Roboto](https://fonts.google.com/specimen/Roboto)
