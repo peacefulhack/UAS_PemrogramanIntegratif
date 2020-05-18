@@ -3,7 +3,7 @@
 [![Name](https://img.shields.io/badge/Name-M.%20Mikail%20Dwi%20k.-blue)](https://github.com/peacefulhack)
 [![NRP](https://img.shields.io/badge/NRP-05311840000028-brightgreen)](https://github.com/peacefulhack)
 
-Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller).
+Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller) dan saya mengucapkan terima kasih kepada [honorable mention](HonorableMention.md).
 <br><br>
 *Lihat [MVC](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm) untuk mengetahui lebih lanjut.*
 # 『Table Of Content』
