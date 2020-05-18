@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+ 
+{% block body %}
+<img src="{{BASE_URL}}/img/pahlawan.png" data-aos="fade-left" data-aos-delay="1000"data-aos-duration="1000" alt="pahlawan" width="300px" style="position: absolute;right: 100px;top: 220px;z-index: 2;" class="d-none d-xl-block">
+    
+<p data-aos="fade" data-aos-delay="3000"data-aos-duration="2000" style="position: absolute;left: 100px;top: 470px;transform: rotate(-90deg);font-family: 'Roboto',sans-serif;font-weight: 900;" class="d-none d-xl-block">Booker T. Washington</p>
+<p data-aos="fade" data-aos-delay="2200"data-aos-duration="1000" style="position: absolute;left: 5px;top: 350px;transform: rotate(-90deg);font-family: 'Roboto',sans-serif;font-weight: 300;font-size: 17px;" class="d-none d-xl-block">"If you want to lift yourself up, lift up someone else."</p>
+
+<div style="position: absolute;width: 100%;height: 91%;overflow: hidden;top: 60px;left: 0px;">
+    <p style="  position: absolute;
+                transform: rotate(-45deg);width: 150%;
+                font-family: 'Roboto',sans-serif;
+                font-weight: 100;font-size: 40px;z-index: -2;color: #e2e2e2;
+                " class="d-none d-xl-block"
+    >If you want to lift yourself up, lift up someone else.It is literally true that you can succeed best and quickest by helping others to succeed.Alone we can do so little; together we can do so much.
+    The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well.
+    The best way to not feel hopeless is to get up and do something. Don’t wait for good things to happen to you. If you go out and make some good things happen, you will fill the world with hope, you will fill yourself with hope.
+    No one is useless in this world who lightens the burdens of another.There is no exercise better for the heart than reaching down and lifting people up.
+    When we give cheerfully and accept gratefully, everyone is blessed.You have not lived today until you have done something for someone who can never repay you.
+    The best antidote I know for worry is work. The best cure for weariness is the challenge of helping someone who is even more tired. One of the great ironies of life is this: He or she who serves almost always benefits more than he or she who is served.
+    I don't want to live in the kind of world where we don't look out for each other. Not just the people that are close to us, but anybody who needs a helping hand. I cant change the way anybody else thinks, or what they choose to do, but I can do my bit.
+    There is nothing more beautiful than someone who goes out of their way to make life beautiful for others.Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.
+    I like video games, but they're really violent. I'd like to play a video game where you help the people who were shot in all the other games. It'd be called 'Really Busy Hospital.
+    It's not enough to have lived.We should be determined to live for something.May I suggest that it be creating joy for others,sharing what we have for the betterment of personkind,bringing hope to the lost and love to the lonely.
+    The pretty ones are usually unhappy. They expect everyone to be enamored of their beauty. How can a person be content when their happiness lies in someone else's hands, ready to be crushed at any moment? Ordinary-looking people are far superior, because they are forced to actually work hard to achieve their goals, instead of expecting people to fall all over themselves to help them.
+    Remember this. Hold on to this. This is the only perfection there is, the perfection of helping others. This is the only thing we can do that has any lasting meaning. This is why we're here. To make each other feel safe.
+    </p>
+</div>
+<div class="container mt-5 pt-5">
+    
+    <div class="shadow p-3 mb-5 bg-white rounded bg-white" data-aos="fade-up"data-aos-duration="2000">
+        <div class="ml-3 mb-5 mt-5" style="font-family: Roboto;">
+                    <h3 style="font-family: Roboto;font-weight: 900;">Sumbang Sekarang!</h3>
+                    {% if pesan is defined %}
+                    <div class="alert alert-light border border-dark alert-dismissible fade show col-4" role="alert">
+                        {{ pesan }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {% endif %}
+                    {% if alert is defined %}
+                    <div class="alert alert-light border border-dark alert-dismissible fade show col-4" role="alert">
+                        {{ alert }}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    {% endif %}
+                    <form action="{{BASE_URL}}/Home/tambah" method="POST" name="formSumbangan">
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <label for="name">Nama</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Contoh: Jhon" minlength="3">
+                            </div>
+                    
+                            <div class="form-group col-md-4">
+                                <label for="gender">Jenis Kelamin</label>
+                                <select class="form-control" id="gender" name="gender">
+                                <option value="0">Laki-Laki</option>
+                                <option value="1">Perempuan</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="field_wrapper">
+                            <div class="row">
+                                <div class="form-group col-md-5">
+                                        <label for="jenisSumbangan[]">Jenis Sumbangan</label>
+                                        <input class="form-control" type="text" list="jenisSumbangan[]" name="jenisSumbangan[]" placeholder="Contoh: Hazmat Suit" />
+                                        <datalist id="jenisSumbangan[]">
+                                            {% for a in jenis %}
+                                            <option>{{ a.name }}</option>
+                                            {% endfor %}
+                                        </datalist>
+                                </div>
+                                <div class="form-group col-md-4">
+                                        <label for="jumlah[]">Jumlah</label>
+                                        <input type="number" class="form-control" id="jumlah[]" name="jumlah[]" placeholder="Contoh: 12">
+                                        <small id="jumlah" class="form-text text-muted">dalam satuan kg/pcs.</small>
+                                </div>
+                                <div class="col">
+                                    <label for="x"></label><br>
+                                    <a href="javascript:void(0);" class="add_button btn btn-outline-primary mt-2 px-3 shadow rounded" title="Tambah Sumbangan">+</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" name="submit" id="submit" class="btn btn-outline-primary">Sumbang</button>
+                    </form>
+            </div>
+    </div>
+</div>
+<script>
+    AOS.init();
+  </script>
+<script>
+    $('.alert').alert();
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("form[name='formSumbangan']").validate({
+            rules: {
+                name: "required",
+                "jenisSumbangan[]": "required",
+                'jumlah[]': {
+                    required: true,
+                    min: 1
+                }
+            },
+            messages: {
+                name: "<span class='badge badge badge-light'>Tolong isi nama anda</span>",
+                "jenisSumbangan[]": "<span class='badge badge badge-light'>Tolong isi jenis sumbangan anda (Beras/Obat/Uang Tunai/dll)</span>",
+                "jumlah[]": "<span class='badge badge badge-light'>tolong isi jumlah dari sumbangan anda (1/2/3/dll)</span>"
+            },
+            submitHandler: function(form){
+                form.submit();
+            }});
+        var maxField = 10;
+        var addButton = $('.add_button');
+        var wrapper = $('.field_wrapper');
+        var fieldHTML = '<div class="row"> '+
+                        '    <div class="col-5"> '+
+                        '        <div class="form-group"> '+
+                        '            <label for="jenisSumbangan[]">Jenis Sumbangan</label> '+
+                        '            <input class="form-control" type="text" list="jenisSumbangan[]" name="jenisSumbangan[]" placeholder="Contoh: Hazmat Suit"/> '+
+                        '            <datalist id="jenisSumbangan[]"> '+
+                        '                {% for a in jenis %} '+
+                        '                <option>{{ a.name }}</option> '+
+                        '                {% endfor %} '+
+                        '            </datalist> '+
+                        '        </div> '+
+                        '    </div> '+
+                        '    <div class="col-4"> '+
+                        '        <div class="form-group"> '+
+                        '            <label for="jumlah[]">Jumlah</label> '+
+                        '            <input type="number" class="form-control" id="jumlah[]" name="jumlah[]" placeholder="Contoh: 12"> '+
+                        '            <small id="jumlah" class="form-text text-muted">dalam satuan kg/pcs.</small> '+
+                        '        </div> '+
+                        '    </div> '+
+                        '    <div class="col"> '+
+                        '        <label for="x"></label><br> '+
+                        '        <a href="javascript:void(0);" class="remove_button btn btn-outline-danger shadow rounded mt-2 px-3">-</a> '+
+                        '    </div> '+
+                        '</div>';
+        var x = 1;
+        
+        
+        $(addButton).click(function(){
+            if(x < maxField){ 
+                x++;
+                $(wrapper).append(fieldHTML);
+            }
+        });
+        
+        $(wrapper).on('click', '.remove_button', function(e){
+            e.preventDefault();
+            $(this).parent('div').parent('div').remove();
+            x--;
+        });
+    });
+    
+</script>
+{% endblock %}

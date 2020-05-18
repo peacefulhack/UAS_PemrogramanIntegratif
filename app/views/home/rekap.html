@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+ 
+{% block body %}
+<style>
+      .page-item.active .page-link {
+        color: #fff !important;
+        background-color: #000 !important;
+        border-color: #000 !important; 
+        outline: none !important;
+        box-shadow: none;
+    }
+
+    .page-link {
+        color: #000 !important;
+        background-color: #fff !important;
+        outline: none !important;
+        box-shadow: none;
+        border: 1px solid #dee2e6 !important; 
+    }
+
+    .page-link:hover {
+        color: #fff !important;
+        background-color: #000 !important;
+        outline: none !important;
+        box-shadow: none;
+        border-color: #000 !important; 
+    }
+    .btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
+    }
+</style>
+<div style="position: absolute;width: 100%;height: 91%;overflow: hidden;top: 60px;left: 0px;">
+  <p style="  position: absolute;
+              transform: rotate(-45deg);width: 150%;
+              font-family: 'Roboto',sans-serif;
+              font-weight: 100;font-size: 40px;z-index: -2;color: #e2e2e2;
+              " class="d-none d-xl-block"
+  >If you want to lift yourself up, lift up someone else.It is literally true that you can succeed best and quickest by helping others to succeed.Alone we can do so little; together we can do so much.
+  The purpose of life is not to be happy. It is to be useful, to be honorable, to be compassionate, to have it make some difference that you have lived and lived well.
+  The best way to not feel hopeless is to get up and do something. Don’t wait for good things to happen to you. If you go out and make some good things happen, you will fill the world with hope, you will fill yourself with hope.
+  No one is useless in this world who lightens the burdens of another.There is no exercise better for the heart than reaching down and lifting people up.
+  When we give cheerfully and accept gratefully, everyone is blessed.You have not lived today until you have done something for someone who can never repay you.
+  The best antidote I know for worry is work. The best cure for weariness is the challenge of helping someone who is even more tired. One of the great ironies of life is this: He or she who serves almost always benefits more than he or she who is served.
+  I don't want to live in the kind of world where we don't look out for each other. Not just the people that are close to us, but anybody who needs a helping hand. I cant change the way anybody else thinks, or what they choose to do, but I can do my bit.
+  There is nothing more beautiful than someone who goes out of their way to make life beautiful for others.Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead.
+  I like video games, but they're really violent. I'd like to play a video game where you help the people who were shot in all the other games. It'd be called 'Really Busy Hospital.
+  It's not enough to have lived.We should be determined to live for something.May I suggest that it be creating joy for others,sharing what we have for the betterment of personkind,bringing hope to the lost and love to the lonely.
+  The pretty ones are usually unhappy. They expect everyone to be enamored of their beauty. How can a person be content when their happiness lies in someone else's hands, ready to be crushed at any moment? Ordinary-looking people are far superior, because they are forced to actually work hard to achieve their goals, instead of expecting people to fall all over themselves to help them.
+  Remember this. Hold on to this. This is the only perfection there is, the perfection of helping others. This is the only thing we can do that has any lasting meaning. This is why we're here. To make each other feel safe.
+  </p>
+</div>
+<div class="container-fluid mt-3" style="font-family: roboto;">
+    <div class="row">
+        <div class="col-4 shadow bg-white rounded mr-5">
+            <h2 style="font-weight: 900;">Jenis sumbangan</h2>
+            <div style="overflow: scroll;height: 600px;">
+              <div class="list-group">
+                <a href="{{BASE_URL}}/jenis" class=" list-group-item list-group-item-action {% if name == 'all' %} active btn-dark {% endif %}">Tampilkan semua</a>
+                {% for a in jenis %}
+                <a href="{{BASE_URL}}/jenis/filter/{{a.id}}" class="{% if name == a.id %} active btn-dark {% endif %}list-group-item list-group-item-action">{{a.name}}</a>
+                    {% endfor %}
+            
+          </div>
+            </div>
+            
+        </div>
+        <div class="col-7 shadow table thead-dark bg-white rounded btn-secondary" data-aos="fade" data-aos-duration="500">
+            <table id="tablepagination" class="table table-bordered table-hover" style="font-size: 15px;">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Nama</th>
+                    <th scope="col">Jenis Sumbangan</th>
+                    <th scope="col">Jumlah (kg atau pcs)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    {% for c in data %}
+                  <tr>
+                    <th scope="row">{{ c.nomer }}</th>
+                    <td>{% if c.gender == TRUE %}Ibu {% else %}Bapak {% endif %}{{ c.name }}</td>
+                    <td>{{ c.jenis }}</td>
+                    <td>{{ c.jumlah }}</td>
+                  </tr>
+                  {% endfor %}  
+                </tbody>
+              </table>
+            
+        </div>
+    </div>
+</div>
+
+<script>
+  AOS.init();
+</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+    $('#tablepagination').DataTable({
+      "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "Semua"]]
+    });
+} );
+    
+</script>
+{% endblock %}
