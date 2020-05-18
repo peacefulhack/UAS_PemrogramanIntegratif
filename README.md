@@ -7,7 +7,7 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
 <br><br>
 *Lihat [MVC](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm) untuk mengetahui lebih lanjut.*
 # Table Of Content
-- [Hero](#COVID-FIGHTER)
+- [Hero](#)
 - [Setup](#setup)
   - [Requirement](#Requirement)
   - [Installation](#Installation)
@@ -19,6 +19,8 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
 - [Hasil](#Hasil)
 - [Framework](#Framework)
 - [Font](#Font)
+- [New Version](#New-Version)
+- [Old Version](#Old-Version)
 
 # Setup
 ### Requirement
