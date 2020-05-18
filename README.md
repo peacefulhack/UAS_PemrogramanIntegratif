@@ -63,13 +63,15 @@ lalu check isi dari satu persatu, apakah ada yang kosong, jika tidak ada maka `s
 ```sql
 INSERT INTO `user`( `name`, `gender`) VALUES (:name , :gender)
 
-dimana name dan gender adalah inputan user yang di passing kedalam variable
+dimana name dan gender adalah inputan 
+user yang di passing kedalam variable
 ```
 lalu mengecheck `isThere` untuk mengecheck apakah jenis yang di inputkan sudah ada atau belum, menggunakan
 ```sql
 SELECT `id` FROM `jenis_sumbangan` WHERE `name`=:jsumbang LIMIT 1
 
-dimana jsumbang adalah jenis sumbangan yang di inputkan user dan sql di limit 1 karena kita butuh 1 nama sama atau tidak ada
+dimana jsumbang adalah jenis sumbangan yang di inputkan user dan 
+sql di limit 1 karena kita butuh 1 nama sama atau tidak ada
 ```
 setelah itu, jika ada maka langusng `setSumbangan`, jika tidak ada maka `setJS` atau men-set Jenis sumbangan dulu menggunakan:
 ```sql
@@ -98,7 +100,10 @@ $sql = "SELECT (@cnt := @cnt + 1) AS nomer, b.name,\n"
                     . "WHERE 1";
 
 
-yang dimana maksudnya, mengambil var cnt untuk dijadikan penomoran, karena A_I dalam ID tidak selalu urut, karena masalah delete atau yang lainnya, lalu INNER JOIN adalah agar user dan jenis_sumbangan nya tidak berupa angka tapi berupa nama dimana user.id=sumbangan.userid dan jenis_sumbangan.id=sumbangan.id WHERE 1 adalah selalu true, jika WHERE dihapus pun tidak masalah.
+yang dimana maksudnya, mengambil var cnt untuk dijadikan penomoran, karena A_I dalam ID tidak selalu urut,
+karena masalah delete atau yang lainnya, lalu INNER JOIN adalah agar user dan jenis_sumbangan nya 
+tidak berupa angka tapi berupa nama dimana user.id=sumbangan.userid dan 
+jenis_sumbangan.id=sumbangan.id WHERE 1 adalah selalu true, jika WHERE dihapus pun tidak masalah.
 ```
 
 URL:`jenis/filter/[id]`
@@ -106,7 +111,8 @@ hampir sama dengan index dari jenis namun ditambahkan WHERE clause dimana:
 ```sql
 WHERE jenis_sumbangan.id=:name
 
-dan name adalah id dari user, kenapa saya namain name, awalnya parameternya berupa name, tapi karena terlalu rawan, saya ganti id.
+dan name adalah id dari user, kenapa saya namain name, 
+awalnya parameternya berupa name, tapi karena terlalu rawan, saya ganti id.
 ```
 
 # Framework
