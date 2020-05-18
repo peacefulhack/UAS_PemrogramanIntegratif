@@ -1,17 +1,18 @@
-# ![pageres](img/pahlawan.gif)
+# ![COVID FIGHTER](img/pahlawan.gif)
 [![Peacefulhack code style](https://img.shields.io/badge/Author-Peacefulhack-green)](https://github.com/peacefulhack)
 [![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
 [![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
 
 
-Capture screenshots of websites in various resolutions. A good way to make sure your websites are responsive. It's speedy and generates 100 screenshots from 10 different websites in just over a minute. It can also be used to render SVG images.
+Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller).
+<br><br>
+*Lihat [MVC](https://www.tutorialspoint.com/mvc_framework/mvc_framework_introduction.htm) untuk mengetahui lebih lanjut.*
 
-*See [pageres-cli](https://github.com/sindresorhus/pageres-cli) for the command-line tool.*
+## Setup
 
-## Install
-
+Download/Clone github ini kedalam komputer anda, lalu install dependencies menggunakan [node.js](https://nodejs.org/en/) dengan cara buka CMD (atau aplikasi serupa) anda lalu ketik
 ```
-$ npm install pageres
+$ npm install
 ```
 
 Note to Linux users: If you get a "No usable sandbox!" error, you need to enable [system sandboxing](https://github.com/GoogleChrome/puppeteer/blob/master/docs/troubleshooting.md#setting-up-chrome-linux-sandbox).
