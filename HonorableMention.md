@@ -1,3 +1,4 @@
+# Honorable Mention
 jika anda penasaran dengan text pada background home
 ![img/pahlawan.gif](img/pahlawan.gif)
 maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi quote yang saya kutip pada background
