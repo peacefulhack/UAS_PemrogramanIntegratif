@@ -37,7 +37,7 @@ maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi 
 
 
 "There is nothing more beautiful than someone who goes out of their way to make life beautiful for others."<br>
-**-Mandy Hale**, The Single Woman: Life, Love, and a Dash of Sass
+**-Mandy Hale**, *The Single Woman: Life, Love, and a Dash of Sass*
 
 "Love is not patronizing and charity isn't about pity, it is about love. Charity and love are the same -- with charity you give love, so don't just give money but reach out your hand instead."<br>
 **-Mother Teresa**
@@ -49,7 +49,7 @@ maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi 
 **-Leo Buscaglia**
 
 "The pretty ones are usually unhappy. They expect everyone to be enamored of their beauty. How can a person be content when their happiness lies in someone else's hands, ready to be crushed at any moment? Ordinary-looking people are far superior, because they are forced to actually work hard to achieve their goals, instead of expecting people to fall all over themselves to help them."<br>
-**-J. Cornell Michel**, Jordan's Brains: A Zombie Evolution
+**-J. Cornell Michel**, *Jordan's Brains: A Zombie Evolution*
 
 "Remember this. Hold on to this. This is the only perfection there is, the perfection of helping others. This is the only thing we can do that has any lasting meaning. This is why we're here. To make each other feel safe."<br>
-**-Andre Agassi**, Open
+**-Andre Agassi**, *Open*
