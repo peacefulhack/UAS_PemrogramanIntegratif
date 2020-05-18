@@ -26,8 +26,6 @@ maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi 
 **-Charles Dickens**
 
 
-❤️Thank you for being nice people❤️
-
 "There is no exercise better for the heart than reaching down and lifting people up."<br>
 **-John Holmes**
 
@@ -70,3 +68,5 @@ maka anda berada di tempat yang tepat, mari kupas HONORABLE MENTION yang berisi 
 
 "Remember this. Hold on to this. This is the only perfection there is, the perfection of helping others. This is the only thing we can do that has any lasting meaning. This is why we're here. To make each other feel safe."<br>
 **-Andre Agassi**, *Open*
+
+❤️Thank you for being nice people❤️
