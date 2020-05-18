@@ -34,7 +34,7 @@ Download/Clone github ini kedalam komputer anda, anda memerlukan [Twig](https://
 $ npm install
 ```
 <img src="img/npmInstall.gif" alt="npm install" width="500px">
-Note: Jika terjadi error, maka re-install NODE.js anda, atau cek [Common Error](https://docs.npmjs.com/common-errors) .
+Note: Jika terjadi error, maka re-install NODE.js anda, atau cek <a href="https://docs.npmjs.com/common-errors">Common Error</a>.
 
 ### Localization
 1. buatlah database baru dengan nama terserah anda (disini saya namakan uas_pi).
