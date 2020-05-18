@@ -2,7 +2,7 @@
 [![Peacefulhack code style](https://img.shields.io/badge/Author-Peacefulhack-green)](https://github.com/peacefulhack)
 [![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
 [![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
-
+[![Name](https://img.shields.io/badge/Name-M.%20Mikail%20Dwi%20k.-blue)]
 
 Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunakan twig, php, dengan desain MVC(Model, View, Controller).
 <br><br>
