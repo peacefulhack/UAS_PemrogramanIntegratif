@@ -70,7 +70,7 @@ Jenis/filter/[id]	=> Menampilkan list sumbangan berdasarkan id
 
 # Penjelasan kodingan
 ### tambah
-URL: `Home/tambah`
+URL: `Home/tambah`<br>
 pertama mengecek apakah method post dari form telah dikirimkan dari home menggunakan `isset`
 lalu check isi dari satu persatu, apakah ada yang kosong, jika tidak ada maka `setUser` dimana berisi 
 ```sql
@@ -98,7 +98,7 @@ INSERT INTO `sumbangan`(`userid`, `jenis`, `jumlah`) VALUES (:userid , :jenisid 
 ```
 
 ### jenis
-URL: `jenis/index`
+URL: `jenis/index`<br>
 langsung select name dari jenis sumbangan menggunakan `getName` dan data list sumbangan dengan `getSumbangan`
 getname adalah select biasa, sedangkan getSumbangan adalah berikut:
 ```php
@@ -119,7 +119,7 @@ tidak berupa angka tapi berupa nama dimana user.id=sumbangan.userid dan
 jenis_sumbangan.id=sumbangan.id WHERE 1 adalah selalu true, jika WHERE dihapus pun tidak masalah.
 ```
 
-URL:`jenis/filter/[id]`
+URL:`jenis/filter/[id]`<br>
 hampir sama dengan index dari jenis namun ditambahkan WHERE clause dimana:
 ```sql
 WHERE jenis_sumbangan.id=:name
