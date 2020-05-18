@@ -1,7 +1,5 @@
 # ![COVID FIGHTER](img/pahlawan.gif)
 [![Peacefulhack code style](https://img.shields.io/badge/Author-Peacefulhack-green)](https://github.com/peacefulhack)
-[![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
-[![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
 [![Name](https://img.shields.io/badge/Name-M.%20Mikail%20Dwi%20k.-blue)](https://github.com/peacefulhack)
 [![NRP](https://img.shields.io/badge/NRP-05311840000028-brightgreen)](https://github.com/peacefulhack)
 
@@ -23,6 +21,8 @@ Covid Fighter adalah web yang dikembangakan oleh mikail dengan ❤️, menggunak
 
 # Setup
 ### Requirement
+[![PHP Symfony](https://img.shields.io/packagist/php-v/symfony/symfony)](https://symfony.com/) 
+[![Twig Status](https://img.shields.io/node/v/twig?label=twig)](https://twig.symfony.com/) 
 1. [Composer](https://getcomposer.org/doc/00-intro.md)
 2. [Twig](https://twig.symfony.com/doc/3.x/intro.html#installation)
 3. [NODE.js](https://nodejs.org/en/download/)
