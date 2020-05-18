@@ -115,7 +115,7 @@ dan name adalah id dari user, kenapa saya namain name,
 awalnya parameternya berupa name, tapi karena terlalu rawan, saya ganti id.
 ```
 # Hasil
-[done](img/done.gif)
+![done](img/done.gif)
 
 # Framework
 1. [Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/download/)
